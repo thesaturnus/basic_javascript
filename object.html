@@ -1,0 +1,54 @@
+<script>
+
+    // lesson 31.1
+
+/*var person = {
+    name : 'fay',
+    age : 17,
+    favColor : 'red'
+}
+console.log(person.name)
+console.log(person['name'])
+console.log(person.name.length)*/
+
+    // lesson 32 object constructor
+
+/*function person(name, age, favColor) 
+{
+    this.name = name,
+    this.age = age,
+    this.favColor = favColor
+}  
+// instance object 
+var p1 = new person('riskibilar', 40, 'black')
+var p2 = new person('lestiy', 54, 'brown')
+var p3 = new person('udin', 58, 'blue')
+var p4 = new person('abel', 17, 'red')
+var p5 = new person('zara', 74, 'green')
+
+document.write(p1.name.age.favColor) 
+document.write(p2.name.age.favColor) 
+document.write(p3.name.age.favColor) 
+document.write(p4.name.age.favColor) 
+document.write(p5.name.age.favColor)*/
+
+// lesson 35 method
+function person(name, age)
+{
+    this.name = name,
+    this.age = age,
+   // this.changeName = function chaneName(name){
+    this.changeAge = function changeAge(age){
+  //      this.name = name
+        this.age = age
+    }
+}
+
+var p1 = new person('fay', 17)
+//console.log(p1.name)
+//p1.changeName('pela')
+//console.log(p1.name)
+console.log(p1.age)
+p1.changeAge('18')
+console.log(p1.age)
+</script>
