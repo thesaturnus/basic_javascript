@@ -1,6 +1,6 @@
 <script>
-    // lesson 37
-    /*
+  // lesson 37
+  /*
     reminder
     function kopiMix(bahan1, bahan2, bahan3){
       this.bahan1 = bahan1,
@@ -25,7 +25,7 @@
    courses[1] = 'menari'
    courses[2] = 'memasak'
 
-   var courses = ['menjahit','memasak','menari']; */
+   var courses = ['menjahit','memasak','menari']; 
 
    // lesson 39
 
@@ -33,4 +33,95 @@
    var c2 = ['programming', 'bernyanyi','berenang']
    var courses = c1.concat(c2)
    document.write(courses)
+
+   // lesson 40 ingat array assosiatif dalam javascript adalah object
+
+   var person = []
+   person['name'] = 'fay'
+   person['age'] = 17
+   document.write(person['name'])
+   document.write(person['age'])
+
+  // lesson 41 math
+
+  //document.write(Math.PI)
+  //  var number = Math.sqrt(81)
+  // var random = Math.ceil(Math.random()*10)
+  // document.write(number+ '<br/>')
+  // document.write(random+ '<br/>')
+
+  // var year = 2005;
+  // document.write(calcCent(year));
+  // function calcCent(year) {
+  //   var count = Math.floor(year / 100);
+  //   return count;
+  // }
+
+  // var number = prompt("masukan angkanya", "");
+  // var answer = Math.sqrt(number);
+  // alert("nilai dari akar pangkat dua "  + number + " is " + answer);
+
+  var jariJari = prompt("Masukkan angka Jari jari? ")
+  var tinggi = prompt("Masukkan angka tinggi? ")
+
+  alert("Volume tabung dengan tinggi "+ tinggi + 
+  "m\ndan Jari jari " + jariJari + "m adalah \n" + 
+  volumeTabung(jariJari, tinggi) + "m")
+
+  function volumeTabung(jariJari, tinggi){
+    var count = Math.PI.toFixed(2) * jariJari ** 2 * tinggi
+    return count
+
+  }
+
+  // lesson 41
+
+  function myAlert(){
+    var name = prompt("masukkan nama anda?")
+    alert('welcome '+ name);
+  }
+  setInterval(myAlert, 1000 );
+
+  // lesson 42 d
+  function printTime(){
+  var d = new Date();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+  var seconds = d.getSeconds();
+  document.body.innerHTML = hours+' : '+minutes+' : '+seconds;
+
+  }
+
+  setInterval(printTime, 1000); 
+
+  var date = 23
+  var month = 8
+  var year = 2005
+   console.log(getWeekDay(year, month, date));
+
+ 
+ function getWeekDay(year, month, date){
+  var names = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+  var date = new Date (year, month, date);
+  var day = date.getDay()
+  return names[day]
+ }
+
+ var y = prompt('masukan tahun lahir kamu')
+ var m = prompt('masukan bulan lahir kamu')
+ var d = prompt('masukan tanggal lahir kamu')
+ var bDay = getWeekDay(y,(m-1),d)
+ console.log(bDay)*/
+
+    var increase =parseInt(prompt('masukan jumlah kenaikan harga?'));
+    var prices = [20, 60, 70];
+    var newPrices = [];
+
+    for(var i=0;i< prices.length;i++){
+        var n =prices[i]+increase;
+        newPrices.push(n);
+    };
+    document.write (newPrices[0] + "<br>" + newPrices[1] + "<br>" + newPrices[2]);
+    console.log(newPrices);
+    alert(newPrices);
 </script>
