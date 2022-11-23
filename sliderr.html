@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image slider</title>
+</head>
+<body>
+    <div>
+        <button onclick="prev()"> Prev </button>
+        <div class="fade-in-image">
+        <img id="slider" src="image/1.jpeg" 
+          width="800px" height="500px"/>
+        <button onclick="next()"> Next </button>
+      </div>
+    </div>
+    <script>
+    var images = [
+    'image/1.jpeg',
+    'image/2.jpeg',
+    'image/3.jpeg',
+    'image/4.jpeg',
+    'image/5.jpeg',
+    'image/6.jpeg',
+    'image/7.jpeg',
+    'image/8.jpeg',
+    'image/9.jpeg',
+    'image/10.jpeg'
+];
+var num = 0;
+function next() {
+    var slider = document.getElementById('slider');
+    num++;
+    if(num >= images.length) {
+        num = 0;
+    }
+    slider.src = images[num];
+}
+function prev() {
+    var slider = document.getElementById('slider');
+    num--;
+    if(num < 0) {
+        num = images.length-1;
+    }
+    slider.src = images[num];
+}
+</script>
+</body>
+</html>
